@@ -1,31 +1,66 @@
-#  IdeaX 2025 Website
+<h1 align="center">Ideax 2025 Website</h1>
 
-This is the website for the IdeaX 2025, built to deliver a clean, responsive, and user-friendly interface.
+<p align="center">
+  <strong>A modern, responsive website</strong><br/>
+  Crafted with creativity, speed, and collaboration in mind.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Tech%20Stack-React%2C%20CSS-blueviolet?style=flat-square"/>
+  <img src="https://img.shields.io/github/license/YOUR_USERNAME/hackathon-frontend?style=flat-square"/>
+</p>
+
+---
+
+## ✨ Overview
+
+This website powers our innovative hackathon idea. Designed to be sleek, responsive, and easy to extend, it provides the visual interface and user experience that brings our solution to life.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework:** [React.js](https://reactjs.org/) (or update to your framework)
-- **Styling:** CSS/ Styled Components
-- **Package Manager:** npm 
+- **React.js** — Frontend framework
+- **Tailwind CSS** (or CSS/SCSS) — Styling
+- **Vite / Webpack** — Bundler (if applicable)
+- **ESLint / Prettier** — Code linting & formatting
+
+---
 
 ## 📁 Project Structure
-├── public/
+├── public/ # Static assets
 ├── src/
-│ ├── components/
-│ ├── pages/
-│ ├── assets/
-│ └── App.jsx
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Route-based views
+│ ├── assets/ # Images and media
+│ └── App.jsx # Main app entry point
+├── .gitignore
 ├── package.json
 └── README.md
 
-##  Getting Started
+---
 
-1. **Clone the repo**
+## 🚀 Getting Started
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/hadumon/mbmIdeax2025.git
+```
+### 2. Install Dependencies
+
+npm install
+
+### 3. Run the Development Server
+
+npm start
+
+### 👥 Team
+
+MBM IdeaX Organizing Committee
 
 🌟 Acknowledgements
-Inspiration: DeerHack
+💡 Inspired by DeerHack
 
-Thanks to the mentors and organizers!
+Made with ❤️ by MBM IdeaX
