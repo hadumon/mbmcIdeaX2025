@@ -64,9 +64,6 @@ MBM IdeaX Organizing Committee
 
 
 
-🌟 Acknowledgements
-💡 Inspired by DeerHack
-
 
 
 Made with ❤️ by MBM IdeaX
