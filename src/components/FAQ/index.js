@@ -26,7 +26,7 @@ const faqData = [
   },
   {
     question:"What is the registration process and deadline?",
-    answer:"You can register via our official website or directly through our Devfolio page. The registration deadline is October 25, 2025.",
+    answer:"You can register via our official website or directly through our Devfolio page. The registration deadline is 26th August, 2025.",
   },
   {
     question:"Are there any registration or participation fees?",
