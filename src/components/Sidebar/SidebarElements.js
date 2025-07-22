@@ -120,4 +120,23 @@ export const ExternalLink = styled.a`
   }
 `;
 
+export const SidebarExternalRoute = styled.a`
+  border-radius: 50px;
+  background: #013F6A;
+  white-space: nowrap;
+  padding: 16px 64px;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #35719C;
+    color: white;
+  }
+`;
 

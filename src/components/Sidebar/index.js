@@ -7,9 +7,9 @@ import {
   SidebarMenu,
   SidebarLink,
   SideBtnWrap,
-  SidebarRoute,
   SidebarNavLink,
-  ExternalLink
+  ExternalLink,
+  SidebarExternalRoute
 } from './SidebarElements';
 
 const Sidebar = ({ isOpen, toggle }) => {
@@ -37,7 +37,14 @@ const Sidebar = ({ isOpen, toggle }) => {
           <ExternalLink href="/2023Recap/index.html" onClick={toggle}>2023 Recap</ExternalLink>
         </SidebarMenu>
         <SideBtnWrap>
-          <SidebarRoute to="/devfolio" onClick={toggle}>Register Now</SidebarRoute>
+          <SidebarExternalRoute
+          href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={toggle}
+        >
+          Register Now
+          </SidebarExternalRoute>
         </SideBtnWrap>
       </SidebarWrapper>
     </SidebarContainer>
