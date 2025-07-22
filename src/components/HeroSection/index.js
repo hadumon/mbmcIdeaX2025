@@ -1,17 +1,7 @@
-import React,{useState,useEffect} from 'react'
-import { Button } from '../ButtonElements';
+import React from 'react'
 import{
     HeroContainer,
     HeroContentWrapper,
-    HeroH1,
-    HeroP,
-    HeroBtnWrapper,
-    ArrowForward,
-    ArrowRight,
-    TextContent,
-    CountdownWrapper,
-    TimeBox,
-    TimeValue,TimeLabel,
     ShapeDivider
 }
 from './HeroElements';
@@ -19,45 +9,6 @@ import image from '../../images/desktop_bg.svg';
 import JoinCard from '../JoinCard';
 
 const HeroSection = () => {
-    const [hover,setHover] = useState(false);
-    const [timeLeft, setTimeLeft] = useState({
-  days: 0,
-  hours: 0,
-  minutes: 0,
-  seconds: 0
-});
-
-useEffect(() => {
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 45);
-
-  const interval = setInterval(() => {
-    const now = new Date();
-    const difference = targetDate - now;
-
-    if (difference <= 0) {
-      clearInterval(interval);
-      setTimeLeft({
-        days: 0,
-        hours: 0,
-        minutes: 0,
-        seconds: 0
-      });
-    } else {
-      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
-      const minutes = Math.floor((difference / (1000 * 60)) % 60);
-      const seconds = Math.floor((difference / 1000) % 60);
-      setTimeLeft({ days, hours, minutes, seconds });
-    }
-  }, 1000);
-
-  return () => clearInterval(interval);
-}, []);
-
-    const onHover = () =>{
-        setHover(!hover);
-    };
 
   return (
     <HeroContainer bgImage={image}>

@@ -9,11 +9,11 @@ import {
   NavItem,
   NavLinks,
   NavBtn,
-  NavBtnLink,
   LogoImg,
   NavRouterLink,
   DropdownLink,
   DropdownMenu,
+  ExternalNavBtnLink
 } from './NavbarElements';
 import { IconContext } from 'react-icons/lib';
 import logo from '../../images/ideax_logo_white.svg';
@@ -139,7 +139,13 @@ const Navbar = ({ toggle }) => {
             </NavItem>
             </NavMenu>
             <NavBtn>
-              <NavBtnLink to="/Devfolio">Register Now</NavBtnLink>
+            <ExternalNavBtnLink
+            href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            Register Now
+            </ExternalNavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>

@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { FaDiscord } from 'react-icons/fa';
 
-import DevfolioButton from './DevfolioButton';
-import logo from '../images/ideax_x_only.svg'; 
+import logo from '../images/ideax_x_only.svg';
 
 const JoinCardContainer = styled.div`
   background: linear-gradient(135deg, rgba(11, 15, 51, 0.5), rgba(30, 27, 75, 0.5));
@@ -14,13 +13,18 @@ const JoinCardContainer = styled.div`
   margin: 0 auto;
   color: white;
   box-shadow: 0 0 30px rgba(128, 90, 213, 0.1);
+
+  @media screen and (max-width: 480px) {
+    padding: 1.5rem 1rem;
+    width: 95%; /* slightly more padding on tiny screens */
+  }
 `;
 
 const TitleRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 1.8rem; /* Increased gap */
+  gap: 1.8rem;
   margin-bottom: 1.5rem;
 `;
 
@@ -35,6 +39,17 @@ const TitleText = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align:left;
+`;
+
+const Line1 = styled.span`
+  font-size: 2.8rem;
+  font-weight: bolder;
+  line-height: 1.4;
+
+    @media screen and (max-width: 480px) {
+    font-size: 2rem; 
+  }
 `;
 
 const Line = styled.span`
@@ -51,20 +66,18 @@ const Line = styled.span`
   }
 `;
 
-const Line1 = styled.span`
-  font-size: 2.8rem;
-  font-weight: bolder;
-  line-height: 1.4;
-`;
-
-const DevfolioWrapper = styled.div`
+const ButtonWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
   margin: 1.5rem 0;
-  text-align: center;
 `;
 
-const DiscordButton = styled.a`
+const StyledButton = styled.a`
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   background: rgba(255, 255, 255, 0.08);
   padding: 0.75rem 1.5rem;
@@ -91,19 +104,6 @@ const Subtext = styled.p`
 `;
 
 const JoinCard = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://apply.devfolio.co/v2/sdk.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    script.onload = () => {
-      if (window.Devfolio) {
-        window.Devfolio.loadEmbeds();
-      }
-    };
-  }, []);
-
   return (
     <JoinCardContainer>
       <TitleRow>
@@ -114,20 +114,24 @@ const JoinCard = () => {
         </TitleText>
       </TitleRow>
 
-      <DevfolioWrapper>
-        <DevfolioButton />
-      </DevfolioWrapper>
+      <ButtonWrapper>
+        <StyledButton
+          href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Register Now
+        </StyledButton>
 
-      <div style={{ textAlign: 'center' }}>
-        <DiscordButton
+        <StyledButton
           href="https://discord.gg/FDzGSRty"
           target="_blank"
           rel="noopener noreferrer"
         >
           <FaDiscord />
           Join Our Discord
-        </DiscordButton>
-      </div>
+        </StyledButton>
+      </ButtonWrapper>
 
       <Subtext>Innovation begins with you!</Subtext>
     </JoinCardContainer>

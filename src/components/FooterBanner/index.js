@@ -17,10 +17,13 @@ const FooterBanner = () => {
           {/* <strong>Don't miss out!</strong> */}
         </BannerText>
         <Button
-          to="/Devfolio"
-          primary="true"
-          big="false"
-          fontBig="false"
+        as="a"
+        href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
+        target="_blank"
+        rel="noopener noreferrer"
+        primary="true"
+        big="false"
+        fontBig="false"
         >
           Register Now
         </Button>
