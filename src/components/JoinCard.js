@@ -97,15 +97,64 @@ const StyledButton = styled.a`
 `;
 
 const Subtext = styled.p`
-  margin-top: 1rem;
   font-size: 1rem;
-  color: #a78bfa;
+  font-weight: 500;
   text-align: center;
+  color: #c4b5fd;
+  letter-spacing: 0.5px;
+  margin-top: 1rem;
+  text-shadow: 0 0 4px rgba(167, 139, 250, 0.4);
+
+  animation: fadeGlow 3s ease-in-out infinite alternate;
+
+  @keyframes fadeGlow {
+    0% {
+      opacity: 0.7;
+      text-shadow: 0 0 2px rgba(167, 139, 250, 0.3);
+    }
+    100% {
+      opacity: 1;
+      text-shadow: 0 0 8px rgba(167, 139, 250, 0.6);
+    }
+  }
+`;
+
+
+const StyledDate = styled.div`
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(90deg, #e9d5ff, #c084fc, #a78bfa);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 2s ease-in-out infinite;
+  text-shadow: 0 0 6px rgba(167, 139, 250, 0.6);
+
+  letter-spacing: 1px;
+  margin-bottom: 1.5rem;
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% center;
+    }
+    50% {
+      background-position: 100% center;
+    }
+    100% {
+      background-position: 0% center;
+    }
+  }
 `;
 
 const JoinCard = () => {
   return (
     <JoinCardContainer>
+
+      <StyledDate>Starting: 31st Oct, 2025</StyledDate>
       <TitleRow>
         <Logo src={logo} alt="Logo" />
         <TitleText>
@@ -124,7 +173,7 @@ const JoinCard = () => {
         </StyledButton>
 
         <StyledButton
-          href="https://discord.gg/FDzGSRty"
+          href="https://discord.gg/87yBYfhVTY"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -133,7 +182,7 @@ const JoinCard = () => {
         </StyledButton>
       </ButtonWrapper>
 
-      <Subtext>Innovation begins with you!</Subtext>
+      <Subtext>Innovation begins with you !</Subtext>
     </JoinCardContainer>
   );
 };

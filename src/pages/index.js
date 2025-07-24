@@ -10,7 +10,7 @@ import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
 import ImageSlider from '../components/ImageSlider';
 import WhatToExpect from '../components/Expect';
-import Sponsors from '../components/Sponsors';
+// import Sponsors from '../components/Sponsors';
 import { useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
@@ -70,9 +70,9 @@ const Home = () => {
         <FAQ />
       </section>
 
-      <section id='sponsors' data-aos="fade-right" data-aos-delay="200">
+      {/* <section id='sponsors' data-aos="fade-right" data-aos-delay="200">
         <Sponsors />
-      </section>
+      </section> */}
       <Footer/>
     </>
   );
