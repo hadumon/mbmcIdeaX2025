@@ -1,30 +1,27 @@
-import React from 'react';
+import React from "react";
 import {
   Section,
   MainTitle,
   SubTitle,
   SponsorsWrapper,
-  SponsorLogo
-} from './sponsorElements';
+  SponsorLogo,
+} from "./sponsorElements";
 
 // Sponsor logos
-import Devfolio from '../../images/sponsors/Devfolio_Logo-White.svg';
-import EthIndia from '../../images/sponsors/ethindia-light.svg';
+import MBM from "../../images/sponsors/mbmlogo_white.png";
 
 const SponsorsSection = () => {
   return (
     <Section>
       <MainTitle>Our Sponsors</MainTitle>
-      <SubTitle>Gold Sponsors</SubTitle>
+      <SubTitle>Platinum Sposnors</SubTitle>
       <SponsorsWrapper>
-        <a href="https://devfolio.co" target="_blank" rel="noopener noreferrer">
-          <SponsorLogo src={Devfolio} alt="DEVFOLIO LOGO" />
-        </a>
-      </SponsorsWrapper>
-      <SubTitle>Season Partners</SubTitle>
-      <SponsorsWrapper>
-        <a href="https://ethindia.co " target='_blank' rel='noopener noreferrer'>
-          <SponsorLogo src={EthIndia} alt="ETHINDIA LOGO" />
+        <a
+          href="https://www.mbmc.edu.np/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SponsorLogo src={MBM} alt="MBMC LOGO" />
         </a>
       </SponsorsWrapper>
     </Section>

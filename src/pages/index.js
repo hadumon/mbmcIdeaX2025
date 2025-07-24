@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react'; 
-import Sidebar from '../components/Sidebar';
-import Navbar from '../components/Navbar';
-import HeroSection from '../components/HeroSection';
-import About from '../components/About';
-import Footer from '../components/Footer';
-import WhyParticipate from '../components/WhyParticipate';
-import Tracks from '../components/Tracks';
-import Testimonials from '../components/Testimonials';
-import FAQ from '../components/FAQ';
-import ImageSlider from '../components/ImageSlider';
-import WhatToExpect from '../components/Expect';
-// import Sponsors from '../components/Sponsors';
-import { useLocation } from 'react-router-dom';
-import { scroller } from 'react-scroll';
+import React, { useState, useEffect } from "react";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
+import HeroSection from "../components/HeroSection";
+import About from "../components/About";
+import Footer from "../components/Footer";
+import WhyParticipate from "../components/WhyParticipate";
+import Tracks from "../components/Tracks";
+import Testimonials from "../components/Testimonials";
+import FAQ from "../components/FAQ";
+import ImageSlider from "../components/ImageSlider";
+import WhatToExpect from "../components/Expect";
+import Sponsors from "../components/Sponsors";
+import { useLocation } from "react-router-dom";
+import { scroller } from "react-scroll";
+import Prize from "../components/Prize";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,14 +36,19 @@ const Home = () => {
 
   return (
     <>
-      <Sidebar isOpen={isOpen} toggle={toggle}/>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
-      
+
       <section id="hero" data-aos="fade-up" data-aos-duration="1000">
         <HeroSection />
       </section>
 
-      <section id="about" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+      <section
+        id="about"
+        data-aos="fade-right"
+        data-aos-delay="1000"
+        data-aos-duration="1000"
+      >
         <About />
       </section>
 
@@ -54,10 +60,14 @@ const Home = () => {
         <Tracks />
       </section>
 
+      <section id="prizes" data-aos="fade-right" data-aos-delay="100">
+        <Prize />
+      </section>
+
       <section id="expect" data-aos="fade-right" data-aos-delay="100">
-        <WhatToExpect />  
-      </section>  
-      
+        <WhatToExpect />
+      </section>
+
       <section id="gallery" data-aos="fade-right" data-aos-delay="100">
         <ImageSlider />
       </section>
@@ -70,10 +80,10 @@ const Home = () => {
         <FAQ />
       </section>
 
-      {/* <section id='sponsors' data-aos="fade-right" data-aos-delay="200">
+      <section id="sponsors" data-aos="fade-right" data-aos-delay="200">
         <Sponsors />
-      </section> */}
-      <Footer/>
+      </section>
+      <Footer />
     </>
   );
 };
