@@ -29,7 +29,7 @@ const prizes = [
     id: 2,
     icon: <FaRocket />,
     title: "Track Winner",
-    amount: "Rs. 15,000",
+    amount: "Rs. 10,000",
     description: "Brand New Track Added!",
   },
   {
