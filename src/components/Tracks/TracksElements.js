@@ -101,7 +101,7 @@ export const ContentCard = styled.div`
   border-radius: 18px;
   padding: 50px 40px;
   width: 100%;
-  max-width: 980px;
+  max-width: 1050px;
   display: flex;
   justify-content: space-between;
   align-items: stretch;

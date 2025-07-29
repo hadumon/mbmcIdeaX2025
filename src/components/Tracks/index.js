@@ -12,45 +12,46 @@ import {
   TrackTitle,
 } from "./TracksElements";
 
-import { FaRobot, FaDoorOpen, FaVrCardboard } from "react-icons/fa";
-import { FaCircleDollarToSlot } from "react-icons/fa6";
-import { SiHomeassistant } from "react-icons/si";
+import { FaDoorOpen } from "react-icons/fa";
+import { GiHealthNormal } from "react-icons/gi";
+import { FaCircleDollarToSlot, FaPeopleRoof } from "react-icons/fa6";
+import { RiPlantFill } from "react-icons/ri";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 
 const trackData = [
   {
-    label: "AR/VR",
-    icon: <FaVrCardboard />,
+    label: "Healthcare",
+    icon: <GiHealthNormal />,
     description:
-      "Build the future of reality with IdeaX. Explore augmented worlds, virtual experiences, and the next frontier of digital innovation.",
+      "Heal the future with IdeaX. Explore the next generation of patient care, innovative medical solutions, and the cutting edge of health technology.",
     reward: "Rs. 10,000",
   },
   {
-    label: "IOT",
-    icon: <SiHomeassistant />,
+    label: "Agrotech",
+    icon: <RiPlantFill />,
     description:
-      "Dive into the interconnected world with IdeaX. Explore smart devices, data streams, and the future of ubiquitous technology.",
+      "Grow the next generation of agriculture with IdeaX. Explore innovative solutions for sustainable farming, food security, and the cutting edge of agricultural technology.",
     reward: "Rs. 10,000",
   },
   {
     label: "Travel & Tourism",
     icon: <MdOutlineModeOfTravel />,
     description:
-      "Dive into the interconnected world of travel with IdeaX. Explore intelligent platforms, real-time data streams, and the future of hyper-personalized journeys.",
+      "Journey into the next era of travel and tourism with IdeaX. Discover innovative solutions for immersive experiences, sustainable exploration, and the cutting edge of hospitality technology.",
     reward: "Rs. 10,000",
   },
   {
-    label: "AI/ML",
-    icon: <FaRobot />,
+    label: "Cultural Identity",
+    icon: <FaPeopleRoof />,
     description:
-      "Innovate the intelligent future with IdeaX. Explore machine learning, deep neural networks, and the power of artificial intelligence.",
+      "Shape the next chapter of cultural identity with IdeaX. Explore innovative ways to preserve heritage, promote diversity, and connect communities in the digital age.",
     reward: "Rs. 10,000",
   },
   {
     label: "Fintech",
     icon: <FaCircleDollarToSlot />,
     description:
-      "Revolutionize the fintech with IdeaX make it secure, use intelligent frameworks and intuitive user experiences, making financial interactions seamless and empowering.",
+      "Transform the next generation of finance with IdeaX. Explore innovative solutions for secure transactions, financial inclusion, and the cutting edge of digital banking.",
     reward: "Rs. 10,000",
   },
   {
