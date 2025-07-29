@@ -47,8 +47,8 @@ const Home = () => {
       <section
         id="about"
         data-aos="fade-right"
-        data-aos-delay="1000"
-        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-duration="200"
       >
         <About />
       </section>

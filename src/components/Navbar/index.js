@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { FaBars } from 'react-icons/fa6';
+import React, { useEffect, useState } from "react";
+import { FaBars } from "react-icons/fa6";
 import {
   Nav,
   NavbarContainer,
@@ -13,12 +13,12 @@ import {
   NavRouterLink,
   DropdownLink,
   DropdownMenu,
-  ExternalNavBtnLink
-} from './NavbarElements';
-import { IconContext } from 'react-icons/lib';
-import logo from '../../images/ideax_logo_white.svg';
-import { animateScroll as scroll } from 'react-scroll';
-import { useLocation, useNavigate } from 'react-router-dom';
+  ExternalNavBtnLink,
+} from "./NavbarElements";
+import { IconContext } from "react-icons/lib";
+import logo from "../../images/ideax_logo_white.svg";
+import { animateScroll as scroll } from "react-scroll";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -35,29 +35,33 @@ const Navbar = ({ toggle }) => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', changeNav);
-    return () => window.removeEventListener('scroll', changeNav);
+    window.addEventListener("scroll", changeNav);
+    return () => window.removeEventListener("scroll", changeNav);
   }, []);
 
   const handleLogoClick = () => {
-    if (location.pathname !== '/') {
-      navigate('/');
+    if (location.pathname !== "/") {
+      navigate("/");
     }
     scroll.scrollToTop({ duration: 200, smooth: true });
   };
 
   const handleScrollLink = (target) => {
-    if (location.pathname !== '/') {
-      navigate('/', { state: { scrollTarget: target } });
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTarget: target } });
     }
   };
 
   return (
     <>
-      <IconContext.Provider value={{ color: '#fff' }}>
+      <IconContext.Provider value={{ color: "#fff" }}>
         <Nav scrollNav={scrollNav}>
           <NavbarContainer>
-            <NavLogo as="div" onClick={handleLogoClick} style={{ cursor: 'pointer' }}>
+            <NavLogo
+              as="div"
+              onClick={handleLogoClick}
+              style={{ cursor: "pointer" }}
+            >
               <LogoImg src={logo} alt="logo" />
             </NavLogo>
             <MobileIcon onClick={toggle}>
@@ -72,7 +76,7 @@ const Navbar = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  onClick={() => handleScrollLink('about')}
+                  onClick={() => handleScrollLink("about")}
                 >
                   About
                 </NavLinks>
@@ -85,7 +89,7 @@ const Navbar = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  onClick={() => handleScrollLink('participation')}
+                  onClick={() => handleScrollLink("participation")}
                 >
                   Participation
                 </NavLinks>
@@ -98,7 +102,7 @@ const Navbar = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  onClick={() => handleScrollLink('tracks')}
+                  onClick={() => handleScrollLink("tracks")}
                 >
                   Tracks
                 </NavLinks>
@@ -111,7 +115,7 @@ const Navbar = ({ toggle }) => {
                   spy={true}
                   exact="true"
                   offset={-80}
-                  onClick={() => handleScrollLink('faq')}
+                  onClick={() => handleScrollLink("faq")}
                 >
                   FAQ
                 </NavLinks>
@@ -121,31 +125,39 @@ const Navbar = ({ toggle }) => {
               </NavItem>
 
               <NavItem
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-              style={{ position: 'relative' }}
+                onMouseEnter={() => setDropdownOpen(true)}
+                onMouseLeave={() => setDropdownOpen(false)}
+                style={{ position: "relative" }}
               >
-            <NavLinks as="div">Recap ▾</NavLinks>
-            {dropdownOpen && (
-            <DropdownMenu>
-            <DropdownLink href="/2024Recap/index.html" target="_blank" rel="noopener noreferrer">
-              IdeaX 2024
-            </DropdownLink>
-            <DropdownLink href="/2023Recap/index.html" target="_blank" rel="noopener noreferrer">
-              IdeaX 2023
-            </DropdownLink>
-            </DropdownMenu>
-            )}
-            </NavItem>
+                <NavLinks as="div">Recap ▾</NavLinks>
+                {dropdownOpen && (
+                  <DropdownMenu>
+                    <DropdownLink
+                      href="/2024Recap/index.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      IdeaX 2024
+                    </DropdownLink>
+                    <DropdownLink
+                      href="/2023Recap/index.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      IdeaX 2023
+                    </DropdownLink>
+                  </DropdownMenu>
+                )}
+              </NavItem>
             </NavMenu>
             <NavBtn>
-            <ExternalNavBtnLink
-            href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >
-            Register Now
-            </ExternalNavBtnLink>
+              <ExternalNavBtnLink
+                href="https://docs.google.com/forms/d/1pfQsNEHA0f8Abr9h_YHXYQ8YSaEFfGzWXBqN8hPtJ7g/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Register Now
+              </ExternalNavBtnLink>
             </NavBtn>
           </NavbarContainer>
         </Nav>
@@ -154,4 +166,4 @@ const Navbar = ({ toggle }) => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

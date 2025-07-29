@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import mobileImage from "../../images/mobile_bg.svg";
 
 export const HeroContainer = styled.div`
@@ -32,15 +31,16 @@ export const HeroBg = styled.div`
 
 export const HeroContentWrapper = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 1200px;
   width: 100%;
+  height: 100%;
   z-index: 3;
   padding: 0 60px;
 
   @media screen and (max-width: 768px) {
-    flex-direction: column;
     padding: 0 20px;
     text-align: center;
   }
@@ -52,7 +52,7 @@ export const TextContent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start; /* keep left alignment */
+  align-items: flex-start;
 
   @media screen and (max-width: 768px) {
     padding-right: 0;
@@ -134,14 +134,6 @@ export const HeroBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-`;
-export const ArrowForward = styled(MdArrowForward)`
-  margin-left: 8px;
-  font-size: 20px;
-`;
-export const ArrowRight = styled(MdKeyboardArrowRight)`
-  margin-left: 8px;
-  font-size: 20px;
 `;
 
 export const ShapeDivider = styled.div`
