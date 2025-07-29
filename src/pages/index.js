@@ -14,6 +14,7 @@ import Sponsors from "../components/Sponsors";
 import { useLocation } from "react-router-dom";
 import { scroller } from "react-scroll";
 import Prize from "../components/Prize";
+import FooterBanner from "../components/FooterBanner";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -83,6 +84,8 @@ const Home = () => {
       <section id="sponsors" data-aos="fade-right" data-aos-delay="200">
         <Sponsors />
       </section>
+
+      <FooterBanner />
       <Footer />
     </>
   );

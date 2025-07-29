@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SectionContainer = styled.section`
   padding: 80px 20px;
   background-color: #041322;
   color: white;
   text-align: center;
-  margin-bottom:80px;
+  margin-bottom: 80px;
 `;
 
 export const ContentWrapper = styled.div`
@@ -25,11 +25,15 @@ export const CardsGrid = styled.div`
   gap: 30px;
   justify-items: center;
 
-    @media screen and (max-width: 980px) {
+  @media screen and (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
-    
-    @media screen and (max-width: 600px) {
+
+  @media screen and (max-width: 980px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 600px) {
     grid-template-columns: 1fr;
   }
 `;
@@ -37,7 +41,7 @@ export const CardsGrid = styled.div`
 export const FlipCard = styled.div`
   background-color: transparent;
   width: 100%;
-  height:480px;
+  height: 480px;
   perspective: 1000px;
 `;
 
@@ -47,7 +51,7 @@ export const FlipCardInner = styled.div`
   height: 100%;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  
+
   ${FlipCard}:hover & {
     transform: rotateY(180deg);
   }
@@ -58,7 +62,7 @@ export const FlipCardFront = styled.div`
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  background: #013F6A;
+  background: #013f6a;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -68,7 +72,7 @@ export const FlipCardFront = styled.div`
 `;
 
 export const FlipCardBack = styled(FlipCardFront)`
-  background:#015482;
+  background: #015482;
   transform: rotateY(180deg);
   padding: 30px;
 `;
@@ -84,5 +88,5 @@ export const CardImage = styled.img`
 export const CardText = styled.p`
   font-size: 1.1rem;
   line-height: 1.4;
-  margin-top:15px;
+  margin-top: 15px;
 `;

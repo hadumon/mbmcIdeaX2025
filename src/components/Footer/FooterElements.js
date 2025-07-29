@@ -1,14 +1,14 @@
-import styled from 'styled-components';
-import bgImage from '../../images/footer-1.png';
+import styled from "styled-components";
+import bgImage from "../../images/footer.png";
 
 export const FooterContainer = styled.footer`
-  // min-height: 30vh;
+  min-height: 94vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background: #015482;
   color: white;
-  padding:4rem 1rem;
+  padding: 4rem 1rem;
 
   background-image: url(${bgImage});
   background-size: cover;
@@ -16,7 +16,7 @@ export const FooterContainer = styled.footer`
   background-repeat: no-repeat;
 
   @media screen and (max-width: 768px) {
-  background-image: none;
+    background-image: none;
   }
 `;
 
@@ -29,7 +29,9 @@ export const FooterWrap = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  gap:4rem;
+  gap: 4rem;
+  position: relative;
+  top: -90px;
 `;
 
 export const FooterRow = styled.div`
@@ -80,11 +82,15 @@ export const ContactInfo = styled.div`
 export const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 20px;
+  gap: 12px;
+  font-size: 18px;
 
   svg {
-    font-size: 20px; /* icon size */
+    font-size: 36px;
+    // background: purple;
+    padding: 6px;
+    border-radius: 50%;
+    color: white;
   }
 `;
 
@@ -101,52 +107,47 @@ export const SocialIcons = styled.div`
 
 export const SocialIconLink = styled.a`
   color: white;
+  transition: all 0.3s ease;
 
   &:hover {
     color: #6fa8c7;
-    transition: 0.3s ease-in-out;
+    transform: scale(1.2);
+    text-shadow: 0 0 10px #6fa8c7;
   }
 `;
 
 export const EventSummary = styled.div`
-  text-align: left;
+  background: rgba(255, 255, 255, 0.08); /* glassmorphism effect */
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  max-width: 300px;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 
   h2 {
-    font-size: 25px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 1rem ;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
   }
 
   p {
-    font-size: 18px;
-    line-height: 1.6  ;
-    margin: 4px 0;
+    font-size: 16px;
+    margin: 8px 0;
+    letter-spacing: 0.3px;
   }
 
   @media screen and (max-width: 820px) {
-    text-align: center;
-    align-items: center;
-
-    h2{
-      font-size: 22px;
-      text-align: left;
-      margin-bottom: 1rem;
-    }
-
-    p{
-      font-size: 17px;
-      text-align: left;
-      }
-  }
-  
-  @media screen and (max-width: 480px) {
-    h2 {
-      font-size: 20px;
-    }
-
-    p {
-      font-size: 16px;
-    }
+    margin: 0 auto;
+    text-align: left;
+    max-width: 90%;
   }
 `;
 
@@ -186,4 +187,3 @@ export const FooterLinksWrapper = styled.div`
     gap: 2rem;
   }
 `;
-

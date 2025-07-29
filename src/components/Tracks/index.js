@@ -12,7 +12,8 @@ import {
   TrackTitle,
 } from "./TracksElements";
 
-import { FaRobot, FaGlobe, FaDoorOpen, FaVrCardboard } from "react-icons/fa";
+import { FaRobot, FaDoorOpen, FaVrCardboard } from "react-icons/fa";
+import { FaCircleDollarToSlot } from "react-icons/fa6";
 import { SiHomeassistant } from "react-icons/si";
 import { MdOutlineModeOfTravel } from "react-icons/md";
 
@@ -46,10 +47,10 @@ const trackData = [
     reward: "Rs. 10,000",
   },
   {
-    label: "Web App",
-    icon: <FaGlobe />,
+    label: "Fintech",
+    icon: <FaCircleDollarToSlot />,
     description:
-      "Build the web of tomorrow with IdeaX. Explore frameworks, user experiences, and the future of online interaction.",
+      "Revolutionize the fintech with IdeaX make it secure, use intelligent frameworks and intuitive user experiences, making financial interactions seamless and empowering.",
     reward: "Rs. 10,000",
   },
   {

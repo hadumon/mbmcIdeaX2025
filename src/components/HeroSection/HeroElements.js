@@ -1,19 +1,21 @@
-import styled from 'styled-components';
-import {MdKeyboardArrowRight,MdArrowForward} from 'react-icons/md';
-import mobileImage from '../../images/mobile_bg.svg';
+import styled from "styled-components";
+import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
+import mobileImage from "../../images/mobile_bg.svg";
 
 export const HeroContainer = styled.div`
-  background: ${({ bgImage }) => bgImage ? `url(${bgImage}) center/cover no-repeat` : '#041322'};
-  background-attachment:fixed;
+  background: ${({ bgImage }) =>
+    bgImage ? `url(${bgImage}) center/cover no-repeat` : "#041322"};
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 60px 30px;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
-  z-index: 1;
+  z-index: 10;
+  padding-bottom: 2rem;
 
-  @media screen and (max-width: 980px){
+  @media screen and (max-width: 980px) {
     background: url(${mobileImage}) center/cover no-repeat;
   }
 `;
@@ -61,11 +63,11 @@ export const TextContent = styled.div`
 export const AnimationWrapper = styled.div`
   flex: 1;
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   align-items: center;
 
   @media screen and (max-width: 768px) {
-    display:none;
+    display: none;
   }
 `;
 
@@ -85,7 +87,7 @@ export const HeroH1 = styled.h1`
     align-items:center;
     text-align:center;
 `;
-export const HeroP=styled.p`
+export const HeroP = styled.p`
   margin-top: 20px;
   margin-bottom: 24px;
   color: white;
@@ -94,13 +96,13 @@ export const HeroP=styled.p`
   text-align: left;
   max-width: 600px;
 
-    @media screen and (max-width:768px){
-    font-size:24px;
-    }
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
+  }
 
-    @media screen and (max-width:480px){
-    font-size:18px;
-    }
+  @media screen and (max-width: 480px) {
+    font-size: 18px;
+  }
 `;
 
 export const CountdownWrapper = styled.div`
@@ -128,18 +130,18 @@ export const TimeLabel = styled.span`
 `;
 
 export const HeroBtnWrapper = styled.div`
-    margin-top:32px;
-    display:flex;
-    flex-direction:column;
-    align-items:flex-start;
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 export const ArrowForward = styled(MdArrowForward)`
-    margin-left:8px;
-    font-size:20px;
+  margin-left: 8px;
+  font-size: 20px;
 `;
 export const ArrowRight = styled(MdKeyboardArrowRight)`
-    margin-left:8px;
-    font-size:20px;
+  margin-left: 8px;
+  font-size: 20px;
 `;
 
 export const ShapeDivider = styled.div`
@@ -154,10 +156,9 @@ export const ShapeDivider = styled.div`
   .desktop-shape {
     display: block;
 
-    @media screen and (max-width:980px){
-      display:none;
+    @media screen and (max-width: 980px) {
+      display: none;
     }
-
   }
 
   .mobile-shape {
@@ -176,7 +177,6 @@ export const ShapeDivider = styled.div`
   }
 
   path {
-    fill:#041322;
+    fill: #041322;
   }
 `;
-

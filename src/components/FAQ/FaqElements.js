@@ -1,15 +1,15 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const FAQContainer = styled.div`
   width: 100%;
-  max-width: 1140px; 
+  max-width: 1140px;
   margin: 0 auto;
   padding: 3rem 2rem;
   box-sizing: border-box;
 `;
 
 export const FAQItem = styled.div`
-  background: #013F6A;
+  background: #013f6a;
   color: white;
   border-radius: 12px;
   margin-bottom: 1.5rem;
@@ -17,15 +17,8 @@ export const FAQItem = styled.div`
   cursor: pointer;
   transition: transform 0.5s ease;
   width: 100%;
-  height: 115px;
   perspective: 1000px;
-
-  @media screen and (max-width:980px){
-    height:140px;
-  }
-
-  @media screen and (max-width: 768px) {
-    height: 140px;}
+  box-sizing: border-box;
 `;
 
 export const QuestionRow = styled.div`
@@ -51,10 +44,10 @@ export const QuestionText = styled.h3`
 `;
 
 export const AnswerWrapper = styled.div`
-  max-height: ${({ isOpen }) => (isOpen ? '300px' : '0')};
+  max-height: ${({ isOpen }) => (isOpen ? "300px" : "0")};
   overflow: hidden;
   transition: max-height 0.4s ease;
-  margin-top: ${({ isOpen }) => (isOpen ? '1rem' : '0')};
+  margin-top: ${({ isOpen }) => (isOpen ? "1rem" : "0")};
 `;
 
 export const Answer = styled.p`
@@ -66,43 +59,46 @@ export const Answer = styled.p`
 
 export const CardInner = styled.div`
   width: 100%;
-  height: 100%;
   position: relative;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  transform: ${({ isOpen }) => (isOpen ? 'rotateY(180deg)' : 'rotateY(0deg)')};
+  transform: ${({ isOpen }) => (isOpen ? "rotateY(180deg)" : "rotateY(0deg)")};
 `;
 
 export const CardFront = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 120px;
   backface-visibility: hidden;
-  background: #013F6A;
+  background: #013f6a;
   color: white;
   border-radius: 12px;
   padding: 1.2rem;
+  box-sizing: border-box;
 `;
 
 export const CardBack = styled.div`
   position: absolute;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   backface-visibility: hidden;
   background: #015482;
   color: white;
   border-radius: 12px;
   padding: 1.2rem;
   transform: rotateY(180deg);
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
 `;
 
 export const FAQH1 = styled.h1`
-    font-size:3rem;
-    color:white;
-    text-align:center;
-    margin-top:80px;
+  font-size: 3rem;
+  color: white;
+  text-align: center;
+  margin-top: 80px;
 
-    @media screen and (max-width:480px){
-        font-size:2rem;
-    }
+  @media screen and (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
