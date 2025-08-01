@@ -69,7 +69,7 @@ const Tracks = () => {
   const active = trackData[activeIndex];
   return (
     <Container id="tracks">
-      <TrackTitle>Tracks</TrackTitle>
+      <TrackTitle>Themes</TrackTitle>
       <TabsWrapper>
         {trackData.map((track, index) => (
           <Tab

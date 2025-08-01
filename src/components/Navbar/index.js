@@ -104,7 +104,7 @@ const Navbar = ({ toggle }) => {
                   offset={-80}
                   onClick={() => handleScrollLink("tracks")}
                 >
-                  Tracks
+                  Themes
                 </NavLinks>
               </NavItem>
               <NavItem>
