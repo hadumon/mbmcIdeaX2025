@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import bgImage from "../../images/footer.png";
+import bgImage from "../../images/footer.webp";
 
 export const FooterContainer = styled.footer`
   min-height: 94vh;

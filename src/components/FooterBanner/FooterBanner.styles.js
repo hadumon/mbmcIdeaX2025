@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const BannerWrapper = styled.div`
   width: 100%;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #041322 0%, #0c2339 50%, #1a3652 100%);
+  background: linear-gradient(135deg, #013e6b 0%, #0e4e7b 50%, #35719c 100%);
   color: white;
   display: flex;
   justify-content: center;
